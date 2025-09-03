@@ -1,4 +1,3 @@
-
 counter = 0;
 document.getElementById("Heart").addEventListener("click", function(){
     counter++
@@ -8,3 +7,6 @@ document.getElementById("Heart").addEventListener("click", function(){
 
 
 
+function getCopy(){
+    
+}
