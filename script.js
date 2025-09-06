@@ -36,28 +36,46 @@ document.getElementById("Heart8").addEventListener("click", function(){
 
 
 //=== Call button functionality start here
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam").innerText;
+    const number = card.querySelector(".ServiceNo").innerText;
+    return { title, number };
+}
 
 
+function doCall(button, coinId) {
+    const coin = parseInt(document.getElementById(coinId).innerText);
 
-function doCall(id) {
-    const coin = parseInt(document.getElementById(id).innerText);
 
-    if (coin > 20) {
-        alert("Calling " + title + " " + Number);
-        const Remaincoin = coin - 20;
-        document.getElementById(id).innerText = Remaincoin;
+    const card = button.closest(".card");
+
+    const { title, number } = getServiceInfo(card);
+
+    if (coin >= 20) {
+        alert("Calling " + title + " " + number);
+        const remainCoin = coin - 20;
+        document.getElementById(coinId).innerText = remainCoin;
     } else {
         alert("You don't have enough coin!");
     }
 }
 
-const title = document.getElementById("ServiceNam").innerText;
-const Number = document.querySelector(".ServiceNo").innerText;
-
 document.getElementById("card-btn").addEventListener("click", function () {
-    doCall("coins");
+    doCall(this, "coins");
+     const history = {
+        name: "National Emergency Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
 
-    const history = {
+    Callhostory.push(history);
+    HistoryList(); 
+});
+
+
+document.getElementById("card-btn1").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
         name: "Police Helpline Number",
         number: "999",
         date: new Date().toLocaleTimeString()
@@ -66,6 +84,133 @@ document.getElementById("card-btn").addEventListener("click", function () {
     Callhostory.push(history);
     HistoryList(); 
 });
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam1").innerText;
+    const number = card.querySelector(".ServiceNo1").innerText;
+    return { title, number };
+}
+
+
+document.getElementById("card-btn2").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
+        name: "Fire Service Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
+
+    Callhostory.push(history);
+    HistoryList(); 
+});
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam2").innerText;
+    const number = card.querySelector(".ServiceNo2").innerText;
+    return { title, number };
+}
+
+document.getElementById("card-btn3").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
+        name: "Fire Service Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
+
+    Callhostory.push(history);
+    HistoryList(); 
+});
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam3").innerText;
+    const number = card.querySelector(".ServiceNo3").innerText;
+    return { title, number };
+}
+
+
+document.getElementById("card-btn4").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
+        name: "Fire Service Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
+
+    Callhostory.push(history);
+    HistoryList(); 
+});
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam4").innerText;
+    const number = card.querySelector(".ServiceNo4").innerText;
+    return { title, number };
+}
+
+document.getElementById("card-btn5").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
+        name: "Fire Service Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
+
+    Callhostory.push(history);
+    HistoryList(); 
+});
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam5").innerText;
+    const number = card.querySelector(".ServiceNo5").innerText;
+    return { title, number };
+}
+
+document.getElementById("card-btn6").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
+        name: "Fire Service Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
+
+    Callhostory.push(history);
+    HistoryList(); 
+});
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam6").innerText;
+    const number = card.querySelector(".ServiceNo6").innerText;
+    return { title, number };
+}
+
+document.getElementById("card-btn7").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
+        name: "Fire Service Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
+
+    Callhostory.push(history);
+    HistoryList(); 
+});
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam7").innerText;
+    const number = card.querySelector(".ServiceNo7").innerText;
+    return { title, number };
+}
+
+document.getElementById("card-btn8").addEventListener("click", function () {
+    doCall(this, "coins");
+     const history = {
+        name: "Fire Service Number",
+        number: "999",
+        date: new Date().toLocaleTimeString()
+    };
+
+    Callhostory.push(history);
+    HistoryList(); 
+});
+function getServiceInfo(card) {
+    const title = card.querySelector("#ServiceNam8").innerText;
+    const number = card.querySelector(".ServiceNo8").innerText;
+    return { title, number };
+}
+
 
 //===History list functionality start here
 
